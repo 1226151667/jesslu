@@ -1,0 +1,42 @@
+	<div class="jing_footer font2" >
+	    <div class="j_f_contact j_footer">手机：18939873459/18621525929&nbsp;&nbsp;&nbsp;&nbsp;地址：上海市东方路8号良丰大厦11G</div>
+	    <div class="j_f_jiantou"><a href="{$Think.session.nextPageUrl}"><i class="fa fa-angle-down"></i></a></div>
+	    <div class="j_f_copy j_footer">copyright ©  捷思路网络科技有限公司</div>
+	</div>
+</div>
+</body>
+<script src="/static/js/jquery-3.1.1.min.js"></script>
+<script>
+var isLeft = $(".whiteline").attr("isLeft");
+var menu = $(".menu");
+if(isLeft=="true"){
+    var j_w_case = $(".j_w_case");    
+}
+var closeBtn = $(".closeBtn");
+var navBtn = $(".navBtn");
+var nav = $(".menu1");
+navBtn.click(function(){
+    $(this).hide();
+    closeBtn.show(600);
+    if(isLeft=="true"){
+        j_w_case.animate({"left":"3%"},1000,function(){
+            menu.css({"background":"rgba(255,255,255,0.03)"});
+            nav.animate({"margin-left":"0"},600);
+        });
+    }else{
+        menu.css({"background":"rgba(255,255,255,0.03)"});
+        nav.animate({"margin-left":"0"},1000);
+    }
+});
+closeBtn.click(function(){
+    $(this).hide();
+    navBtn.show(600);
+    menu.css({"background":"none"});
+    nav.animate({"margin-left":"100%"},600,function(){
+        if(isLeft=="true"){
+            j_w_case.animate({"left":"12%"},1000);
+        }
+    });
+});
+</script>
+</html>

@@ -1,0 +1,157 @@
+{include file="public/base" title="首页" /}
+<article class="content items-list-page">
+    <div class="title-search-block">
+        <div class="title-block">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="title"> 
+                        H5游戏/页面 
+                        <a href="javascript:void(0)" class="btn btn-primary btn-sm rounded-s" data-toggle="modal" data-target="#add-modal">
+		                  <i class="fa fa-plus icon"></i>&nbsp;添加
+	                    </a>
+                        <a href="javascript:void(0)" class="btn btn-primary btn-sm rounded-s" data-toggle="modal" data-target="#confirm-modal">
+                          <i class="fa fa-close icon"></i>&nbsp;删除
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="items-search">
+            <form class="form-inline">
+                <div class="input-group"> 
+                    <input type="text" class="form-control boxed rounded-s" placeholder="Search for..."> 
+                    <span class="input-group-btn">
+	                   <button class="btn btn-secondary rounded-s" type="button">
+		                  <i class="fa fa-search"></i>
+	                   </button>
+                    </span> 
+                </div>
+            </form>
+        </div>
+    </div>
+    <section class="section">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-block">
+                        <section class="example">
+                            <div class="table-flip-scroll">
+                                <table class="table table-striped table-bordered table-hover flip-content">
+                                    <thead class="flip-header">
+                                        <tr>
+                                            <th>
+                                                <div class="item-col fixed item-col-check"> 
+                                                    <label class="item-check" id="select-all-items">
+                                                        <input type="checkbox" class="checkbox">
+                                                        <span></span>
+                                                    </label>
+                                                </div>
+                                            </th>
+                                            <th>封面图片</th>
+                                            <th>H5标题</th>
+                                            <th>H5描述</th>
+                                            <th>创建时间</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX">
+                                            <td>
+                                                <div class="item-col fixed item-col-check"> 
+                                                    <label class="item-check" id="select-all-items">
+                                                         <input type="checkbox" class="checkbox">
+                                                         <span></span>
+                                                    </label> 
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <img src="/images/h5/1.jpg" width="33px" height="53px">
+                                            </td>
+                                            <td>测试网站</td>
+                                            <td>小清新网站风格拉近用户的情切感，让用户亲近大自然。</td>
+                                            <td>2017-05-10 23:00:00</td>
+                                            <td>
+                                                <a href="javascript:void(0)" data-toggle="modal" data-target="#add-modal" title="编辑"> 
+                                                    <i class="fa fa-pencil"></i> 
+                                                </a>  
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class="text-xs-right">
+        <ul class="pagination">
+            <li class="page-item"> <a class="page-link" href="">上一页</a> </li>
+            <li class="page-item active"> <a class="page-link" href="">1</a> </li>
+            <li class="page-item"> <a class="page-link" href="">2</a> </li>
+            <li class="page-item"> <a class="page-link" href="">3</a> </li>
+            <li class="page-item"> <a class="page-link" href="">4</a> </li>
+            <li class="page-item"> <a class="page-link" href="">5</a> </li>
+            <li class="page-item"> <a class="page-link" href="">下一页</a> </li>
+        </ul>
+    </nav>
+</article>
+<!-- 删除提示 -->
+<div class="modal fade" id="confirm-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header"> 
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		           <span aria-hidden="true">&times;</span>
+	            </button>
+                <h4 class="modal-title"><i class="fa fa-warning"></i> 提示</h4>
+            </div>
+            <div class="modal-body">
+                <p>您确定要删除吗?</p>
+            </div>
+            <div class="modal-footer"> 
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button> 
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button> 
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 添加 -->
+<div class="modal fade main-modal" id="add-modal" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header"> 
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"><i class="fa fa-html5"></i> 添加</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" enctype="multipart/form-data">
+                    <div class="form-group"> 
+                        <label class="control-label">封面图片</label> 
+                        <div class="picIpt picIpt-h5">
+                            <input type="file" name="file" id="pic">
+                            <img src="/images/h5/1.jpg" width="132px" height="212px">
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <label class="control-label">H5标题</label> 
+                        <input type="text" class="form-control underlined" placeholder="请输入3~9个字符"> 
+                    </div>
+                    <div class="form-group"><!-- has-error --> 
+                        <label class="control-label">H5描述</label> 
+                        <textarea rows="3" class="form-control underlined" placeholder="请输入10~30个字符"></textarea> 
+                        <!-- <span class="fa fa-times form-control-feedback"></span> -->
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer"> 
+                <button type="button" class="btn btn-primary" data-dismiss="modal">立即添加</button> 
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#cancel-modal">取消</button> 
+            </div>
+        </div>
+    </div>
+</div>
+{include file="public/footer" /}

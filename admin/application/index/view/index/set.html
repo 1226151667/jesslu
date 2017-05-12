@@ -1,0 +1,112 @@
+{include file="public/base" title="首页" /}
+<article class="content forms-page">
+    <div class="title-block">
+        <h3 class="title"> 网站设置 
+            <a href="javascript:void(0)" class="btn btn-primary btn-sm rounded-s" data-toggle="modal" data-target="#edit-modal">
+                <i class="fa fa-pencil"></i>&nbsp;编辑
+            </a>
+        </h3>
+    </div>
+    <section class="section">
+        <div class="row sameheight-container">
+            <div class="col-md-12">
+                <div class="card card-block sameheight-item">
+                    <form role="form">
+                        <div class="form-group"> 
+                            <label class="control-label">微信公众号</label> 
+                            <div>
+                                <img src="/images/wx.jpg" >
+                            </div>
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">网站标题</label> 
+                            <input type="text" class="form-control underlined" disabled="disabled"> 
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">网站关键词</label> 
+                            <input type="password" class="form-control underlined" disabled="disabled"> 
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">网站描述</label> 
+                            <input type="text" class="form-control underlined" disabled="disabled">
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">联系邮箱</label> 
+                            <input type="text" class="form-control underlined" disabled="disabled"> 
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">联系电话</label> 
+                            <input type="text" class="form-control underlined" disabled="disabled"> 
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">公司地址</label> 
+                            <input type="text" class="form-control underlined" disabled="disabled"> 
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">统计代码</label> 
+                            <textarea rows="3" class="form-control underlined" disabled="disabled"></textarea> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+<!-- 添加 -->
+<div class="modal fade main-modal" id="edit-modal" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header"> 
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"><i class="fa fa-cog"></i> 编辑</h4>
+            </div>
+            <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group"> 
+                            <label class="control-label">微信公众号</label> 
+                            <div class="picIpt picIpt-set">
+                                <input type="file" name="file" id="pic">
+                                <img src="/images/wx.jpg" width="155px" height="155px">
+                            </div>
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">网站标题</label> 
+                            <input type="text" class="form-control underlined" placeholder="请输入5~80个字符" > 
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">网站关键词</label> 
+                            <input type="password" class="form-control underlined" placeholder="请输入10~100个字符" > 
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">网站描述</label> 
+                            <input type="text" class="form-control underlined" placeholder="请输入20~200个字符" >
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">联系邮箱</label> 
+                            <input type="text" class="form-control underlined" placeholder="多个邮箱以/分隔" > 
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">联系电话</label> 
+                            <input type="text" class="form-control underlined" placeholder="多个号码以/分隔" > 
+                        </div>
+                        <div class="form-group"> 
+                            <label class="control-label">公司地址</label> 
+                            <input type="text" class="form-control underlined" placeholder="请输入公司地址" > 
+                        </div>
+                        <div class="form-group has-error"> 
+                            <label class="control-label">统计代码</label> 
+                            <textarea rows="3" class="form-control underlined" placeholder="请输入有效的统计代码"></textarea> 
+                            <span class="fa fa-times form-control-feedback"></span>
+                        </div>
+                    </form>
+            </div>
+            <div class="modal-footer"> 
+                <button type="button" class="btn btn-primary" data-dismiss="modal">立即提交</button> 
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#cancel-modal">取消</button> 
+            </div>
+        </div>
+    </div>
+</div>
+{include file="public/footer" /}

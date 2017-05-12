@@ -1,0 +1,22 @@
+/*图片选择框*/
+.picIpt{position: relative;}
+.picIpt input{
+	opacity:0;
+    filter:alpha(opacity=0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;cursor:pointer
+}
+.picIpt-h5 input{
+    height: 212px;
+    width: 132px;
+}
+.picIpt-web input{
+    height: 264px;
+    width: 332px;
+}
+.picIpt-set input{
+    height: 155px;
+    width: 155px;
+}
